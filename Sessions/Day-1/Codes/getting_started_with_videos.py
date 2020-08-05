@@ -1,7 +1,9 @@
 import cv2
-cap=cv2.VideoCapture(0)
+cap=cv2.VideoCapture(r"C:\Users\SHIDHIN\Downloads\Telegram Desktop\DVDWap - Kappela (2019) Mlylm HD AAC.mkv")
 fourcc=cv2.VideoWriter_fourcc(*"XVID")
-out=cv2.VideoWriter("OUTPUT.mkv",fourcc,9,(640,480))
+print(cap.get(3))
+print(cap.get(4))
+out=cv2.VideoWriter("OUTPUT.mkv",fourcc,9,(int(cap.get(3)),int(cap.get(4))))
 while True:
     ret,frame=cap.read()
     #frame=cv2.flip(frame)

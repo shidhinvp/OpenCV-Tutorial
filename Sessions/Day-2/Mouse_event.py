@@ -16,7 +16,7 @@ def click_event(event,x,y,flags,param):
         g=img[x,y,1]
         r=img[x,y,2]
         mycolorimage=np.zeros((342,548,3),np.uint8)#2^8-1
-        mycolorimage[:]=[b,g,r]
+        mycolorimage=[b,g,r]
         cv2.imshow("NUMPY",mycolorimage)
 img=r"C:\Users\SHIDHIN\Downloads\PYTHON\OPENCV\session\OpenCV-Tutorial\Images\lena.jpg"
 img=cv2.imread(img)

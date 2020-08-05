@@ -11,14 +11,14 @@ def click_event(event,x,y,flags,param):
         cv2.putText(img,text,(x,y),font,1,(0,0,255),3)
         cv2.imshow("IMAGE",img)
     if event==cv2.EVENT_RBUTTONDOWN:
-        #dmycolorimage=np.zeros((512,512,3),np.uint8)
+        mycolorimage=np.zeros((512,512,3),np.uint8)
         b=img[x,y,0]
         g=img[x,y,1]
         r=img[x,y,2]
-        numimg=np.zeros((342,548),np.uint8)#2^8-1
-        numimg[:]=[b,g,r]
-        cv2.imshow("NUMPY",numimg)
-img=r"C:\Users\SHIDHIN\Downloads\PYTHON\OPENCV\session\OpenCV-Tutorial\Images\messi.jpg"
+        mycolorimage=np.zeros((342,548,3),np.uint8)#2^8-1
+        mycolorimage[:]=[b,g,r]
+        cv2.imshow("NUMPY",mycolorimage)
+img=r"C:\Users\SHIDHIN\Downloads\PYTHON\OPENCV\session\OpenCV-Tutorial\Images\lena.jpg"
 img=cv2.imread(img)
 print(img.shape)
 #numimg=np.zeros((342,548),np.uint8)#2^8-1

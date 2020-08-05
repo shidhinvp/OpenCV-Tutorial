@@ -1,0 +1,21 @@
+import cv2
+cv2.imread(varname)-to read the image
+cv2.imshow("win_name",img_name)- To show the image
+cv2.waitKey(millisec)- To hold the image
+cv2.destroyAllWindows()- To destroy All the Window opened by cv2 library
+cv2.destroyWindow("Specific_window_name")- To destroy a specifc window
+----------------------------------------------------------------------------------------------------------------------------------
+*cap=cv2.VideoCapture(varname)- To read the video (0 or -1) to read the system cam 
+*cap.read()- To read the captured video and this gives to variables ret,frame where ret is a boolean and frame is the image 
+*cv2.cvtColor(img_name,cv2.COLOR_BGR2GRAY)- cv2.COLOR_BGR2GRAY we have more method this method is used to convert a bgr channel to gray channel 
+& cv2.cvtColor- Used to convert a channel to different methods
+*cap.release() - This function is used to close the background specific cam or the video which we opened (for example: if you haven't mentioned cap.release() your system cam light won't stop till you close the output shell )
+*cv2.VideoWriter_fourcc- This method is used to indicate the fourcc code which we are going to use while saving a video to our system(fourcc is a four valued character that is used to indicate the codac we are going to use while saving & codac is what helps us to decode and encode while opening or closing of a video while playing in a systems)
+*out=cv2.VideoWriter("Win_name with extension",fourcc,frames per sec,(height and width of the frame))
+*out.write(frame)- Used to write the frame 
+*out.release() - Is used to release the writen video
+----------------------------------------------------------------------------------------------------------------------------------
+#drawaing functions in opencv
+*cv2.line(img_name,first_point,Second_point,color,thickness)- Function to draw a line in a frame
+*cv2.rectangle(img_name,first_point,Second_point,Color,Thickness)-Function to draw  a rectangle in a frame 
+*cv2.arrowedLine(img_name,first_point,Second_point,color,thickness)-Function to draw an arrowed  line in a frame

@@ -30,4 +30,6 @@ cv2.rectangle(img_name,first_point,Second_point,Color,Thickness)-Function to dra
 cv2.arrowedLine(img_name,first_point,Second_point,color,thickness)-Function to draw   an arrowed  line in a frame
 
 cv2.circle(img_name,center,radius,color,thickness)-Function to draw a circle
+
+cv2.putText(img_name,text,position,font,font_size,color,thickness)
 ----------------------------------------------------------------------------------------------------------------------------------

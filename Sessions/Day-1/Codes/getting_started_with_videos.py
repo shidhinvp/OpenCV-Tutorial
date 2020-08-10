@@ -7,7 +7,8 @@ if name=="MOVIE":
   print("WIDTH",cap.get(cv2.CAP_PROP_FRAME_WIDTH))
   print("HEIGHT",cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
   fourcc=cv2.VideoWriter_fourcc(*"XVID")
-  out=cv2.VideoWriter(r"C:\Users\SHIDHIN\Downloads\PYTHON\OPENCV\session\OpenCV-Tutorial\Video_Handling.mp4",fourcc,24,(int(cap.get(3)),int(cap.get(4))))
+  #For Size I Have Inseted (3000,3000) But While Printing Shape The Shape Will Be Changed To Maximum
+  out=cv2.VideoWriter(r"C:\Users\SHIDHIN\Downloads\PYTHON\OPENCV\session\OpenCV-Tutorial\Video_Handling.mp4",fourcc,24,(3000,3000))
   print("WIDTH_USING_INT",cap.get(3))
   print("HEIGHT_USING_INT",cap.get(4))
   while True:
@@ -42,3 +43,4 @@ else:
       break
 #Background Cam Will Be Closed
 cap.release()
+out.release()

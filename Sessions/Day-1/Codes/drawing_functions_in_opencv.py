@@ -22,10 +22,11 @@ if cv2.waitKey(0)==ord("q"):
 cv2.line(img,(0,100),(100,100),(0,0,255),3)
 cv2.arrowedLine(img,(0,200),(200,200),(255,0,255),3)#138, 119, 51
 cv2.rectangle(img,(50,150),(60,300),(255,255,255),-1)
-cv2.circle(img,(200,20),7,(255,255,0),3)
+cv2.circle(img,(200,20),7,(255,255,0),-1)
 font=cv2.FONT_HERSHEY_SIMPLEX
-cv2.putText(img,"opencv",(10,20),font,0.5,(255,0,0),10)
+cv2.putText(img,"opencv",(10,20),font,0.5,(255,0,0),1)
 cv2.imshow("EDITED_IMG",img)
+#27 is esc_Key in keyboard
 if cv2.waitKey(0)==27:
   cv2.destroyAllWindows()
 

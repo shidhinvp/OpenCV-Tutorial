@@ -20,6 +20,7 @@ if cv2.waitKey(0)==ord("q"):
   cv2.destroyAllWindows()
 #Drawing Function's In Opencv
 cv2.line(img,(0,100),(100,100),(0,0,255),3)
+cv2.arrowedLine(img,(0,200),(200,200),(255,0,255),3)
 cv2.imshow("EDITED_IMG",img)
 if cv2.waitKey(0)==27:
   cv2.destroyAllWindows()

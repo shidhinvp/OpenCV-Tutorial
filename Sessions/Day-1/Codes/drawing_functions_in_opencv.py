@@ -1,11 +1,29 @@
 import cv2
-img=r"C:\Users\SHIDHIN\Downloads\PYTHON\OPENCV\image\lena.jpg"
+img=r"C:\Users\SHIDHIN\Downloads\PYTHON\OPENCV\session\OpenCV-Tutorial\Images\lena.jpg"
 img=cv2.imread(img)
-cv2.line(img,(0,0),(300,300),(140,73,105),3)#105, 73, 140
-cv2.arrowedLine(img,(0,50),(50,50),(0,0,255),3)
-cv2.rectangle(img,(0,70),(100,200),(0,255,0),2)
-cv2.circle(img,(150,150),50,(255,0,0),3)
-font=cv2.FONT_HERSHEY_COMPLEX
-cv2.putText(img,"OPENCV",(100,500),font,1,(255,255,255),2)
-cv2.imshow("FRAME",img)
-cv2.waitKey(0)
+print("IMAGE",img.shape)
+#Converting Image's Color_Space BGR2GRAY
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+print("GRAY",gray.shape)
+#Spliting Images
+b,g,r=cv2.split(img)
+#Merge Images
+Merge_image=cv2.merge((b,g,r))
+#Showing All The Images
+cv2.imshow("MERGE",Merge_image)
+cv2.imshow("B",b)
+cv2.imshow("G",g)
+cv2.imshow("R",r)
+cv2.imshow("GRAY",gray)
+cv2.imshow("ORG_IMG",img)
+if cv2.waitKey(0)==ord("q"):
+  cv2.destroyAllWindows()
+#Drawing Function's In Opencv
+cv2.line(img,(0,100),(100,100),(0,0,255),3)
+cv2.imshow("EDITED_IMG",img)
+if cv2.waitKey(0)==27:
+  cv2.destroyAllWindows()
+
+
+
+

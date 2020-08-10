@@ -1,0 +1,2 @@
+*Operations- 
+https://docs.opencv.org/4.0.0/d2/de8/group__core__array.html#ga10ac1bfb180e2cfda1701d06c24fdbd6
